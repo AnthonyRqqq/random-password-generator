@@ -32,6 +32,11 @@ var generatePassword = function () {
   (confirms[i]);
   }
 
+  // Confirms at least one group of characters can be used in password generation.
+  if (!specialCharacter && !lowercaseCharacter && !uppercaseCharacter && !numberCharacter) {
+    alert("Please select at least one type of character to be used for the password.");
+    return;
+  }
 
 // Builds the available character list from user input
 var availableCharacters = [];
