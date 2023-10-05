@@ -13,6 +13,13 @@ var generatePassword = function () {
   var passwordLength = prompt("Choose a password length from 8-128 characters.");
   passwordLength = parseInt(passwordLength);
 
+
+// Confirms that password is a number within the length parameters
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please select a valid length.");
+    return;
+  }
+
   // Creates variables for confirm messages
   var specialCharacter = confirm("Would you like your password to include special characters?");
   var lowercaseCharacter = confirm("Would you like your password to include lowercase characters?");
